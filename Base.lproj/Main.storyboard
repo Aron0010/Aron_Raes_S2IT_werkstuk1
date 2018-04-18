@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-fD-XLf">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-fD-XLf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f8e-fD-XLf" firstAttribute="bottom" secondItem="5Vk-a6-zwY" secondAttribute="bottom" id="ZFT-2u-yVO"/>
+                            <constraint firstItem="f8e-fD-XLf" firstAttribute="top" secondItem="5Vk-a6-zwY" secondAttribute="top" id="cXa-Zf-Aoe"/>
+                            <constraint firstAttribute="trailing" secondItem="f8e-fD-XLf" secondAttribute="trailing" id="mE9-aL-Zf5"/>
+                            <constraint firstItem="f8e-fD-XLf" firstAttribute="leading" secondItem="3yR-o9-040" secondAttribute="leading" id="pJg-Jh-qQs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Vk-a6-zwY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="z7f-lX-sun"/>
@@ -35,37 +40,37 @@
         <!--Table View Controller-->
         <scene sceneID="cH4-pf-TAh">
             <objects>
-                <tableViewController id="HHn-BU-kKu" sceneMemberID="viewController">
+                <tableViewController id="HHn-BU-kKu" customClass="TableViewController" customModule="Aron_Raes_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g4U-6m-5Qe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="121" id="Z7x-ki-I35">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="aTW-Na-aA0" detailTextLabel="JRh-Lq-rJA" imageView="ZrF-Ko-dsf" rowHeight="121" style="IBUITableViewCellStyleSubtitle" id="Z7x-ki-I35" userLabel="myCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z7x-ki-I35" id="lxL-6r-uUf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMz-H5-5Mb" userLabel="Voornaam">
-                                            <rect key="frame" x="166" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aTW-Na-aA0">
+                                            <rect key="frame" x="167" y="40" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-ra-tXD">
-                                            <rect key="frame" x="16" y="12" width="141" height="97"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JRh-Lq-rJA">
+                                            <rect key="frame" x="167" y="63.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="vogel1" id="ZrF-Ko-dsf">
+                                            <rect key="frame" x="16" y="0.0" width="136" height="120.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkr-j7-Jr1" userLabel="Naam">
-                                            <rect key="frame" x="166" y="40" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -84,20 +89,25 @@
             </objects>
             <point key="canvasLocation" x="1544.8" y="-41.829085457271368"/>
         </scene>
-        <!--View Controller-->
+        <!--Item View Controller-->
         <scene sceneID="DBV-k1-MLc">
             <objects>
-                <viewController id="hoa-Mb-SfX" sceneMemberID="viewController">
+                <viewController id="hoa-Mb-SfX" customClass="ItemViewController" customModule="Aron_Raes_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAU-Wu-MKw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A8B-dv-6CV">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A8B-dv-6CV">
                                 <rect key="frame" x="0.0" y="198" width="375" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A8B-dv-6CV" firstAttribute="leading" secondItem="bAU-Wu-MKw" secondAttribute="leading" id="3g4-eO-TYj"/>
+                            <constraint firstItem="Yz3-a0-NNh" firstAttribute="bottom" secondItem="A8B-dv-6CV" secondAttribute="bottom" constant="266" id="7bL-kg-SZY"/>
+                            <constraint firstItem="A8B-dv-6CV" firstAttribute="top" secondItem="Yz3-a0-NNh" secondAttribute="top" constant="178" id="cAS-z7-5kU"/>
+                            <constraint firstAttribute="trailing" secondItem="A8B-dv-6CV" secondAttribute="trailing" id="dNe-O2-tcB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yz3-a0-NNh"/>
                     </view>
                 </viewController>
@@ -124,4 +134,7 @@
             <point key="canvasLocation" x="593" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="vogel1" width="256" height="226"/>
+    </resources>
 </document>

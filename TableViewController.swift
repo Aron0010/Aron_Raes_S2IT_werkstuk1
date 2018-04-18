@@ -11,9 +11,9 @@ import UIKit
 class TableViewController: UITableViewController {
     
     //ITEMS AANMAKEN
-    var item1 = Item(voornaam: "Aron",naam: "Raes", image: "foto1")
+    var item1 = Item(voornaam: "Aron",naam: "Raes", image: "vogel1")
     //NAAM IMAGE VERVANGEN DOOR CORRECTE NAAM
-    var item2 = Item(voornaam: "Aron",naam: "Raes", image: "foto2")
+    var item2 = Item(voornaam: "Jos",naam: "Vervaecken", image: "vogel2")
     
     //ARRAY AANMAKEN
     var itemArray = [Item]()
@@ -49,15 +49,18 @@ class TableViewController: UITableViewController {
         return itemArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+     
+     // Configure the cell...
+     
+     cell.imageView?.image = UIImage(named: itemArray[indexPath.row].image)//CELL IMAGE INSTELLEN -> GAAT ZOEKEN NAAR EEN IMAGE IN ASSETS MET MEEGEGEVEN NAAM
+     cell.textLabel?.text = itemArray[indexPath.row].voornaam//CELL TITEL = TITEL VAN ITEM
+     cell.detailTextLabel?.text = itemArray[indexPath.row].naam//CELL TITEL = TITEL VAN ITEM
+     return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

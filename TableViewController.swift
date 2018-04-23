@@ -11,9 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
     
     //ITEMS AANMAKEN
-    var item1 = Item(voornaam: "Aron",naam: "Raes", image: "vogel1")
-    //NAAM IMAGE VERVANGEN DOOR CORRECTE NAAM
-    var item2 = Item(voornaam: "Jos",naam: "Vervaecken", image: "vogel2")
+    var item1 = Item(voornaam: "Jos" ,naam: "Vermeir",telnummer:0491827365,gemeente: "Groot-Bijgaarden",postcode:1483,straat:"werkstukstraat",huisnummer:1, image:"vogel1")
+    var item2 = Item(voornaam: "Mark" ,naam: "Verveacke",telnummer:0456473829,gemeente: "Wambeek",postcode:1742,straat:"stagelaan",huisnummer:89, image:"vogel2")
     
     //ARRAY AANMAKEN
     var itemArray = [Item]()
@@ -97,14 +96,18 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        if let nextvc = segue.destination as? ItemViewController {
+            let indexpath = self.tableView.indexPathForSelectedRow!
+            nextvc.item = self.itemArray[indexpath.row]
+        }
     
+    
+}
 }

@@ -11,9 +11,9 @@ import UIKit
 class TableViewController: UITableViewController {
     
     //ITEMS AANMAKEN
-    var item1 = Item(voornaam: "Jos" ,naam: "Vermeir",telnummer:0491827365,gemeente: "Groot-Bijgaarden",postcode:1483,straat:"werkstukstraat",huisnummer:1, image:"vogel1")
-    var item2 = Item(voornaam: "Mark" ,naam: "Verveacke",telnummer:0456473829,gemeente: "Wambeek",postcode:1742,straat:"stagelaan",huisnummer:89, image:"vogel2")
-    
+    var item1 = Item(voornaam: "Jos" ,naam: "Vermeir",telnummer:0491827365,gemeente: "Groot-Bijgaarden",postcode:1483,straat:"werkstukstraat",huisnummer:1, image:"vogel1",latitude:50.874614,longitude:4.181396)
+    var item2 = Item(voornaam: "Mark" ,naam: "Verveacke",telnummer:0456473829,gemeente: "Wambeek",postcode:1742,straat:"stagelaan",huisnummer:89, image:"vogel2",latitude:50.875867,longitude:4.183778)
+   
     //ARRAY AANMAKEN
     var itemArray = [Item]()
     

@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="zmN-Oq-40j">
             <objects>
-                <viewController id="1O5-uG-mJh" sceneMemberID="viewController">
+                <viewController id="1O5-uG-mJh" customClass="ViewController" customModule="Aron_Raes_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3yR-o9-040">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,9 @@
                         <viewLayoutGuide key="safeArea" id="5Vk-a6-zwY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="z7f-lX-sun"/>
+                    <connections>
+                        <outlet property="myMapView" destination="f8e-fD-XLf" id="3N1-eF-qhi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFB-6p-oI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +165,7 @@
                         <outlet property="lblNaam" destination="rXY-IJ-xD5" id="Bw4-02-uSQ"/>
                         <outlet property="lblTel" destination="3ne-JT-n4e" id="TDx-E2-s7s"/>
                         <outlet property="lblVoornaam" destination="CtH-TE-Mr1" id="DTG-VZ-lYQ"/>
+                        <outlet property="myDetailMap" destination="A8B-dv-6CV" id="gcr-Mo-eUb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d8-UQ-ZJA" userLabel="First Responder" sceneMemberID="firstResponder"/>

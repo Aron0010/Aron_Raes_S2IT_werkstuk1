@@ -32,8 +32,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotation.title = location["title"] as? String
             annotation.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! Double, longitude: location["longitude"] as! Double)
             self.myMapView.addAnnotation(annotation)
-            
+            self.myMapView.showAnnotations(self.myMapView.annotations, animated: true)
         }
+        
+        
+        
         
         
       

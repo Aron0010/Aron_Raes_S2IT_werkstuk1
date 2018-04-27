@@ -11,8 +11,12 @@ import UIKit
 class TableViewController: UITableViewController {
     
     //ITEMS AANMAKEN
-    var item1 = Item(voornaam: "Jos" ,naam: "Vermeir",telnummer:0491827365,gemeente: "Groot-Bijgaarden",postcode:1483,straat:"werkstukstraat",huisnummer:1, image:"vogel1",latitude:50.874614,longitude:4.181396)
-    var item2 = Item(voornaam: "Mark" ,naam: "Verveacke",telnummer:0456473829,gemeente: "Wambeek",postcode:1742,straat:"stagelaan",huisnummer:89, image:"vogel2",latitude:50.875867,longitude:4.183778)
+    var item1 = Item(voornaam: "Sam" ,naam: "Deroo",telnummer:0491827365,gemeente: "Torhout",postcode:1483,straat:"werkstukstraat",huisnummer:1, image:"sam",latitude:50.874614,longitude:4.181396)
+    
+    var item2 = Item(voornaam: "Ivan" ,naam: "Zaytsev",telnummer:0456473829,gemeente: "Rome",postcode:1742,straat:"stagelaan",huisnummer:89, image:"ivan",latitude:41.886987,longitude:12.490328)
+    
+      var item3 = Item(voornaam: "Alexander" ,naam: "Butko",telnummer:0456473829,gemeente: "Moskou",postcode:1742,straat:"stagelaan",huisnummer:89, image:"butko",latitude:55.760557,longitude:37.569074)
+    
    
     //ARRAY AANMAKEN
     var itemArray = [Item]()
@@ -23,6 +27,7 @@ class TableViewController: UITableViewController {
         //ITEMS IN ARRAY
         itemArray.append(item1)
         itemArray.append(item2)
+        itemArray.append(item3)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

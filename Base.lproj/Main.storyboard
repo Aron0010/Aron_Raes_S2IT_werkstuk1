@@ -169,22 +169,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d8-UQ-ZJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="dNm-16-BEG"/>
+                <tapGestureRecognizer id="dNm-16-BEG">
+                    <connections>
+                        <action selector="imageTapped:" destination="hoa-Mb-SfX" id="34e-cA-3G3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3284" y="-42.728635682158924"/>
-        </scene>
-        <!--Picture View Controller-->
-        <scene sceneID="GmB-Fp-1fb">
-            <objects>
-                <viewController id="aVc-yT-pV2" customClass="PictureViewController" customModule="Aron_Raes_S2IT_werkstuk1" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1GR-Ol-UoV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Xg-VP-ei5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4012" y="-41"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L79-qp-V4F">

@@ -49,9 +49,9 @@ class ItemViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.lblVoornaam.text = item?.voornaam
+        self.lblVoornaam.text = "Voornaam: \(String(describing: item!.voornaam))"
         
-        self.lblNaam.text = item?.naam
+        self.lblNaam.text = "Naam: \(String(describing: item!.naam))"
         
         self.lblAdres.text = "Adres: \(item!.straat) \(item!.huisnummer), \(item!.postcode) \(item!.gemeente)"
         
@@ -68,9 +68,7 @@ class ItemViewController: UIViewController, MKMapViewDelegate {
         annotation.coordinate = CLLocationCoordinate2D(latitude: (item?.latitude)!, longitude: (item?.longitude)!)
         self.myDetailMap.addAnnotation(annotation)
         self.myDetailMap.showAnnotations(self.myDetailMap.annotations, animated: true)
-    
-       
-        
+      
     }
     
     override func didReceiveMemoryWarning() {
